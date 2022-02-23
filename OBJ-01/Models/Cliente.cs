@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace OBJ_01.Models
 {
-    public class Pessoa
+    public class Cliente
     {
         public string nome { get; set; }
         public int idade { get; set; }
+        public int telefone { get; set; }
 
     }
 }

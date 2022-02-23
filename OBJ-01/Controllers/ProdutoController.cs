@@ -7,25 +7,23 @@ using System.Threading.Tasks;
 
 namespace OBJ_01.Controllers
 {
-    public class PessoaController : Controller
+    public class ProdutoController : Controller
     {
-        public static List<Pessoa> lsPeesoa = new List<Pessoa>();
-       
+        public static List<Produto> lsProduto = new List<Produto>();
+
         public IActionResult Index()
         {
-            return View(lsPeesoa);
+            return View(lsProduto);
         }
         public IActionResult Cadastrar()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult salvar(Pessoa item)
+        public IActionResult salvar(Produto item)
         {
-            lsPeesoa.Add(item);
+            lsProduto.Add(item);
             return RedirectToAction("index");
         }
-
-
     }
 }
